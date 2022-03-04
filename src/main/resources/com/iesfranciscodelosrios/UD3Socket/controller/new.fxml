@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="410.0" prefWidth="715.0" style="-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-background-color: transparent; -fx-background-radius: 10;" stylesheets="@fullpackagestyle.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.iesfranciscodelosrios.UD3Socket.controller.ControllerClientes">
+   <children>
+      <BorderPane layoutX="114.0" layoutY="54.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 10; -fx-background-color: white;" stylesheets="@fullpackagestyle.css" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <top>
+            <AnchorPane prefHeight="57.0" prefWidth="700.0" style="-fx-background-color: #6747CD; -fx-background-radius: 10 10 0 0;" stylesheets="@fullpackagestyle.css" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="177.0" layoutY="20.0" prefHeight="25.0" prefWidth="523.0" style="-fx-background-color: #6747CD; -fx-background-radius: 5 5 0 0;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fx:id="Exit" fitHeight="22.0" fitWidth="22.0" layoutX="678.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/exit.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <HBox fx:id="datos" layoutX="177.0" layoutY="1.0" prefHeight="32.0" prefWidth="523.0" style="-fx-background-radius: 5 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="177.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+                     <children>
+                        <Button fx:id="btnNombre" alignment="BASELINE_LEFT" prefHeight="32.0" prefWidth="205.0" style="-fx-background-color: transparent;" styleClass="menuItem" text="Nombre: ">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/d2.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btnApellido" alignment="BASELINE_LEFT" prefHeight="32.0" prefWidth="167.0" style="-fx-background-color: transparent;" styleClass="menuItem" text="Apellido:" />
+                        <Button fx:id="btnAdministrador" alignment="BASELINE_LEFT" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: transparent;" styleClass="menuItem">
+                           <graphic>
+                              <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/perfil-del-usuario.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Pane layoutY="-71.0" prefHeight="57.0" prefWidth="175.0" style="-fx-border-radius: 10 5 5 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="525.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="46.0" fitWidth="73.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/zorro1.png" />
+                           </image>
+                        </ImageView>
+                        <Text fill="WHITE" layoutX="63.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ScammerBank" wrappingWidth="105.82421875">
+                           <font>
+                              <Font name="System Bold Italic" size="15.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="362.0" prefWidth="175.0" style="-fx-background-color: #6747CD; -fx-background-radius: 0 0 0 10;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="LateralOperario" prefHeight="288.0" prefWidth="177.0" visible="false">
+                     <children>
+                        <Line endX="174.99998474121094" endY="5.0" fill="WHITE" startX="-1.52587890625E-5" startY="5.0" stroke="WHITE" strokeWidth="3.0" />
+                        <VBox layoutY="11.0" prefHeight="277.0" prefWidth="177.0">
+                           <children>
+                              <Button fx:id="Opc21" alignment="BASELINE_LEFT" prefHeight="31.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="1.  Crear cliente" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Opc22" alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="2. Crear Cuenta a Usuario" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Opc23" alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="3. Ver Cuenta" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Opc24" alignment="BASELINE_LEFT" layoutX="10.0" layoutY="79.0" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="4. Ver Cliente" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="LateralCliente" prefHeight="304.0" prefWidth="176.0" visible="false">
+                     <children>
+                        <Line endX="174.99998474121094" endY="5.0" fill="WHITE" startX="-1.52587890625E-5" startY="5.0" stroke="WHITE" strokeWidth="3.0" />
+                        <VBox prefHeight="288.0" prefWidth="177.0" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="17.0">
+                           <children>
+                              <Button fx:id="Opc1" alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="Ver Cuenta" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="35.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/v1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Opc2" alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="Ingresar Dinero" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/i1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                              <Button fx:id="Opc3" alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="176.0" stylesheets="@fullpackagestyle.css" text="Retirar Dinero" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/r1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <VBox.margin>
+                                    <Insets bottom="10.0" />
+                                 </VBox.margin>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="Opc4" alignment="BASELINE_LEFT" layoutX="-1.0" layoutY="301.0" prefHeight="38.0" prefWidth="176.0" style="-fx-background-color: #4d2fae; -fx-background-radius: 0 0 0 10;" stylesheets="@fullpackagestyle.css" text="Salir" textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Images/s1.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane fx:id="stagecentro" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 5;" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane fx:id="CentroOperario" prefHeight="345.0" prefWidth="528.0" style="-fx-background-radius: 0 0 5 0;" visible="false">
+                     <children>
+                        <Pane layoutY="8.0" prefHeight="327.0" prefWidth="508.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="8.0">
+                           <children>
+                              <TableView fx:id="opCuenta" layoutY="59.0" prefHeight="86.0" prefWidth="163.0">
+                                <columns>
+                                  <TableColumn fx:id="opCuentaid" prefWidth="44.0" text="ID" />
+                                  <TableColumn fx:id="opCuentaDinero" minWidth="-1.0" prefWidth="116.0" text="Dinero" />
+                                </columns>
+                              </TableView>
+                              <TableView fx:id="opUser" layoutX="182.0" layoutY="59.0" prefHeight="90.0" prefWidth="326.0">
+                                <columns>
+                                  <TableColumn fx:id="opUserid" prefWidth="27.0" text="ID" />
+                                  <TableColumn fx:id="opUsernombre" prefWidth="82.0" text="Nombre" />
+                                    <TableColumn fx:id="opUserApellido" prefWidth="84.0" text="Apellido" />
+                                    <TableColumn fx:id="opUserUsername" prefWidth="90.0" text="Username" />
+                                    <TableColumn fx:id="opUserop" prefWidth="41.0" text="OP" />
+                                </columns>
+                              </TableView>
+                              <TextField fx:id="opNewNombre" layoutX="301.0" layoutY="189.0" />
+                              <TextField fx:id="opNewApellido" layoutX="301.0" layoutY="216.0" />
+                              <TextField fx:id="opNewUsername" layoutX="301.0" layoutY="243.0" />
+                              <TextField fx:id="opNewPassword" layoutX="301.0" layoutY="270.0" />
+                              <CheckBox fx:id="opNewUserop" layoutX="301.0" layoutY="301.0" mnemonicParsing="false" text="Operario" />
+                              <Label layoutX="251.0" layoutY="193.0" text="Nombre" />
+                              <Label layoutX="251.0" layoutY="222.0" text="Apellido" />
+                              <Label layoutX="240.0" layoutY="247.0" text="Username" />
+                              <Label layoutX="243.0" layoutY="274.0" text="Password" />
+                              <Label layoutX="14.0" layoutY="26.0" text="ID CUENTA:">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="15.0" />
+                                 </font></Label>
+                              <Label layoutX="191.0" layoutY="26.0" text="ID USUARIO:">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="16.0" />
+                                 </font></Label>
+                              <TextField fx:id="opCuentaBuscar" layoutX="97.0" layoutY="24.0" prefHeight="25.0" prefWidth="44.0" />
+                              <TextField fx:id="opUserBuscar" layoutX="287.0" layoutY="25.0" prefHeight="25.0" prefWidth="40.0" />
+                              <Button fx:id="transaccion" layoutX="1.0" layoutY="164.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="160.0" stylesheets="@fullpackagestyle.css" text="Transacciones" />
+                              <TextArea fx:id="optxttransaccion" layoutX="3.0" layoutY="189.0" prefHeight="138.0" prefWidth="159.0" />
+                              <Label layoutX="279.0" layoutY="158.0" text="Nuevo usuario">
+                                 <font>
+                                    <Font name="Bauhaus 93" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Line endX="-44.0" endY="-62.0" layoutX="254.0" layoutY="231.0" startX="-44.0" startY="68.0" />
+                              <Line endX="-44.0" endY="-62.0" layoutX="514.0" layoutY="227.0" startX="-44.0" startY="68.0" />
+                           </children>
+                        </Pane>
+                     </children></AnchorPane>
+                  <AnchorPane fx:id="CentroClientes" prefHeight="200.0" prefWidth="200.0" style="-fx-background-radius: 5;" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Pane layoutX="22.0" layoutY="14.0" prefHeight="56.0" prefWidth="481.0">
+                           <children>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="2.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/i2.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="TxtDineroIngresar" layoutX="131.0" layoutY="7.0" prefHeight="25.0" prefWidth="100.0" />
+                              <Label layoutX="292.0" layoutY="11.0" text="Retirar Dinero">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="260.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Images/r2.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField fx:id="TxtDineroRetirar" layoutX="378.0" layoutY="7.0" prefHeight="25.0" prefWidth="100.0" />
+                              <Label layoutX="35.0" layoutY="11.0" text="Ingresar Dinero">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="22.0" layoutY="73.0" prefHeight="231.0" prefWidth="480.0">
+                           <children>
+                              <TableView fx:id="cuentas" prefHeight="230.0" prefWidth="230.0" stylesheets="@fullpackagestyle.css">
+                                <columns>
+                                  <TableColumn fx:id="id" maxWidth="800.0" prefWidth="75.0" text="Cuenta" />
+                                  <TableColumn fx:id="dinero" maxWidth="3000.0" prefWidth="135.0" text="Dinero" />
+                                </columns>
+                                 <columnResizePolicy>
+                                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                 </columnResizePolicy>
+                              </TableView>
+                              <TextArea fx:id="txttransaccion" layoutX="264.0" layoutY="25.0" prefHeight="205.0" prefWidth="215.0" wrapText="true" />
+                              <Button fx:id="transaccion" layoutX="264.0" layoutY="2.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="215.0" stylesheets="@fullpackagestyle.css" text="Transacciones" />
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="39.0" prefWidth="523.0" style="-fx-background-radius: 5;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="304.0">
+                           <children>
+                              <Button alignment="BASELINE_LEFT" prefHeight="38.0" prefWidth="74.0" style="-fx-background-color: transparent;" styleClass="menuItem" text="MSG:">
+                                 <graphic>
+                                    <ImageView fitHeight="22.0" fitWidth="22.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Images/carta.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btnDescripcion" alignment="BASELINE_LEFT" layoutX="74.0" layoutY="1.0" prefHeight="38.0" prefWidth="447.0" style="-fx-background-color: transparent; -fx-background-radius: 5;" styleClass="menuItem" />
+                           </children>
+                        </Pane>
+                     </children>
+                  </AnchorPane>
+               </children></AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

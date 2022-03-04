@@ -1,0 +1,77 @@
+.button{
+	-fx-background-color : transparent;
+}
+.button:hover{
+	-fx-background-color : #4d2fae;
+}
+.button:pressed{
+	-fx-background-color : #73A3EF;
+}
+.AnchorPane {
+	-fx-background-radius : 10;
+}
+.BorderPane {
+	-fx-background-radius : 10;
+}
+
+.table-view, TextArea{
+	-fx-background-radius : 7;
+}
+.table-view .column-header,
+.table-view .column-header-background .filler {
+	-fx-cell-size : 20;
+	-fx-background-color : #6747CD;
+	-fx-background-radius : 5 5 0 0;
+}
+
+.table-view .column-header .label {
+	-fx-text-fill : white;
+	-fx-font-weight : bold;
+	-fx-alingment : CENTER_LEFT;
+}
+
+.table-view .cell {
+	-fx-cell-size : 30;
+	-fx-alingment : center-left;
+	-fx-text-fill : #000000;
+	-fx-alingment : CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+	-fx-background-color : rgb(127, 172, 243);
+}
+
+.table-row-cell:selected .text {
+	-fx-fill : white;
+}
+
+/* Estilo para componente con ID datos */
+#btnInicioSesion{
+	-fx-background-color : #6747CD;
+	-fx-background-radius : 5;
+}
+#btnInicioSesion:pressed{
+	-fx-background-color : #73A3EF;
+	-fx-background-radius : 5 ;
+}
+#datos { 
+    -fx-background-color : white;
+}
+#opc4:hover{
+	-fx-background-color : #4d2fae;
+}
+#opc4:pressed{
+	-fx-background-color : #73A3EF;
+}
+#transaccion { 
+	-fx-text-fill : white;
+	-fx-font-weight : bold;
+	-fx-alingment : CENTER_LEFT;
+    -fx-background-color : #6747CD;
+}
+#optransaccion { 
+	-fx-text-fill : white;
+	-fx-font-weight : bold;
+	-fx-alingment : CENTER_LEFT;
+    -fx-background-color : #6747CD;
+}
