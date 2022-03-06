@@ -29,7 +29,10 @@ public class HiloCliente implements Runnable {
 			try {
 
 				mensaje = (Mensaje) in.readObject();
-				
+				/**
+				 * El servidor solo devuelve un comando 100 como respuesta cuando se ha realizado una operacion con un usuario o cuenta
+				 * Cuando es una comprobacion para el login de si el usuario existe en la base de datos no devuelve comando alguno
+				 */
 				if (mensaje.getComando()==100) {
 					cliente(!mensaje.getUser().getAdministrador());					
 				}else {
@@ -39,7 +42,7 @@ public class HiloCliente implements Runnable {
 
 			} catch (IOException e) {
 				if ("Connection reset".equals(e.getMessage())) {
-					System.out.println("�La conexi�n al servidor ha sido interrumpida!");
+					System.out.println("La conexion al servidor ha sido interrumpida");
 					break;
 				}
 				if (!timeToStop) {
@@ -53,13 +56,14 @@ public class HiloCliente implements Runnable {
 
 	}
 
+	//Setea los datos que recibe del servidore en el controllerclientes en funcion de si es un cliente o un operario
 	private void cliente(boolean b) {
 		Platform.runLater(() -> {
 			try {
 				// MENU DE ACCIONES PARA LOS CLIENTES.
 				if (!mensaje.getUser().getAdministrador()) {
 					switch (mensaje.getComando()) {
-					case 100:
+					case 100: //Setea el controller para un cliente con datos actualizados
 						if (mensaje.getCuenta() != null) {
 							ControllerClientes.cuenta = mensaje.getCuenta();
 							ControllerClientes.mensaje = mensaje;
@@ -70,7 +74,7 @@ public class HiloCliente implements Runnable {
 					default:
 						break;
 					}
-				} else {
+				} else { 
 					
 					if (mensaje.getDescripcion().equals("Error al crear a un usuario")
 							|| mensaje.getDescripcion().equals("Error al borrar cuenta a un usuario")
@@ -78,6 +82,7 @@ public class HiloCliente implements Runnable {
 						ControllerClientes.showError(mensaje.getDescripcion());
 					} else {
 						
+						//Setea el controller para un operario con datos actualizados
 							if (mensaje != null) {
 								if (mensaje.getDescripcion().equals("Nueva cuenta asignada al usuario")) {
 									ControllerClientes.showInfo(mensaje.getDescripcion());

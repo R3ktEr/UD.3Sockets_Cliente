@@ -259,6 +259,7 @@ public class ControllerClientes {
 
 	}
 
+	//Configura las tablas de cliente u operario dependiendo de cual de los dos se ha logeado y muestra los datos
 	public static void cofigureOnServerResponse() {
 		if (controllerClientStage != null) {
 
@@ -292,6 +293,7 @@ public class ControllerClientes {
 		}
 	}
 
+	//Crea las celdas de la tabla de cliente y le inyecta una lista de observables
 	public void configureCliente() {
 		if (mensaje.getCuenta() != null) {
 			try {
@@ -312,6 +314,7 @@ public class ControllerClientes {
 		}
 	}
 
+	//Crea las celdas de las tablas de operario y les inyecta una lista de observables
 	public void configureOperario() {
 		if (mensaje.getCuenta() != null) {
 			try {
@@ -359,18 +362,18 @@ public class ControllerClientes {
 		}
 	}
 
+	//Lo que se ejecutará al hacer click en segun que boton del menu de cliente
 	private void OpcionesCliente(int opc) {
 		try {
 			switch (opc) {
 
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 1 PARA RECIBIR DATOS DE LA CUENTA/S.
+			//RECIBIR DATOS DE LA CUENTA/S.
 			case 1:
 				ControllerClientes.mensaje.setComando(1);
 				sendObject(mensaje);
 				break;
 
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 3 ENVIANDO EL DINERO A INGRESAR
-			// INDICADO POR TxtDineroRetirar E INTRODUCIDO EN mensaje.dinerotransaccion.
+			//INGRESAR DINERO
 			case 2:
 				if (TxtDineroIngresar.getText().length() >= 1) {
 					int dinero = 0;
@@ -395,8 +398,7 @@ public class ControllerClientes {
 				}
 				break;
 
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 2 ENVIANDO EL DINERO A RETIRAR
-			// INDICADO POR TxtDineroIngresar E INTRODUCIDO EN mensaje.dinerotransaccion.
+			// RETIRAR DINERO
 			case 3:
 				if (TxtDineroRetirar.getText().length() >= 1) {
 					int dinero = 0;
@@ -430,10 +432,11 @@ public class ControllerClientes {
 
 	}
 
+	//Lo que se ejecutará al hacer click en segun que boton del menu de operario
 	private void OpcionesOperario(int opc) {
 		try {
 			switch (opc) {
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 1 PARA RECIBIR DATOS DE LA CUENTA/S.
+			// RECIBIR DATOS DE LA CUENTA/S.
 			case 1:
 			case 2:
 				if (opNewNombre.getText().length() >= 4 && opNewApellido.getText().length() >= 3
@@ -470,7 +473,7 @@ public class ControllerClientes {
 
 				break;
 
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 3 EN BUSCA DE CUENTA
+			// BUSCAR CUENTA
 			case 3:
 				if (opCuentaBuscar.getText().length() >= 1) {
 					int id = 0;
@@ -496,7 +499,7 @@ public class ControllerClientes {
 				}
 				break;
 
-			// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 4 EN BUSCA DE CLIENTES
+			//BUSCAR DE CLIENTES
 			case 4:
 				if (opUserBuscar.getText().length() >= 1) {
 					int id = 0;
@@ -531,8 +534,7 @@ public class ControllerClientes {
 
 	}
 
-	// ENVIAR MENSAJE AL SERVIDOR CON COMANDO 4 CERRANDO EL SOCKET VOLVIENDO AL
-	// LOGIN.
+	//Deslogeo
 	private void Opc4() {
 		try {
 			if (usuario != null) {
